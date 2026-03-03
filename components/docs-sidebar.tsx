@@ -15,6 +15,8 @@ import {
   Wrench,
   ChevronRight,
   HelpCircle,
+  BookOpen,
+  Heart,
 } from "lucide-react"
 import { useState } from "react"
 
@@ -32,36 +34,38 @@ type NavSection = {
 
 const navigation: NavSection[] = [
   {
-    title: "OpenScan",
+    title: "Introduction",
+    items: [
+      { title: "Welcome to OpenScan", href: "/welcome", icon: BookOpen },
+      { title: "Values", href: "/values", icon: Heart },
+    ],
+  },
+  {
+    title: "Stack",
     items: [
       {
         title: "Explorer",
         href: "/explorer",
         icon: Compass,
         children: [
-          { title: "How It Works", href: "/how-it-works" },
+          { title: "How It Works", href: "/explorer/how-it-works" },
           { title: "Functionalities", href: "/explorer/functionalities" },
-          { title: "Alpha status", href: "/explorer/alpha-status" },
+          { title: "Alpha Status", href: "/explorer/alpha-status" },
         ],
       },
-    ],
-  },
-  {
-    title: "OpenScan Stack",
-    items: [
+      { title: "Skills", href: "/skills", icon: Sparkles },
+      { title: "Hardhat Plugin", href: "/hardhat-plugin", icon: Puzzle },
+      { title: "Tools", href: "/tools", icon: Wrench },
       { title: "Network Connectors", href: "/network-connectors", icon: Network },
       { title: "Metadata", href: "/metadata", icon: FileText },
-      { title: "Skills", href: "/skills", icon: Sparkles },
-      { title: "Tools", href: "/tools", icon: Wrench },
-      { title: "Hardhat Plugin", href: "/hardhat-plugin", icon: Puzzle },
     ],
   },
   {
     title: "More",
     items: [
+      { title: "Tutorials", href: "/tutorials", icon: HelpCircle },
       { title: "Comparison", href: "/comparison", icon: GitCompare },
       { title: "FAQs", href: "/faqs", icon: HelpCircle },
-      { title: "Tutorials", href: "/tutorials", icon: HelpCircle },
     ],
   },
 ]
@@ -168,7 +172,7 @@ export function DocsSidebar() {
     <aside className="hidden lg:flex lg:w-64 lg:shrink-0 lg:flex-col border-r border-border">
       <div className="sticky top-0 flex h-full max-h-screen flex-col overflow-y-auto px-4 pb-8">
         <div className="flex h-14 items-center border-b border-border px-2">
-          <Link href="/network-connectors" className="flex items-center gap-2">
+          <Link href="/welcome" className="flex items-center gap-2">
             <FileText className="h-5 w-5 text-accent" />
             <span className="font-semibold text-foreground tracking-tight">
               OpenScan Docs
@@ -187,7 +191,7 @@ export function MobileNav() {
   return (
     <div className="lg:hidden">
       <div className="flex h-14 items-center justify-between border-b border-border px-4">
-        <Link href="/network-connectors" className="flex items-center gap-2">
+        <Link href="/welcome" className="flex items-center gap-2">
           <FileText className="h-5 w-5 text-accent" />
           <span className="font-semibold text-foreground tracking-tight">
             OpenScan Docs

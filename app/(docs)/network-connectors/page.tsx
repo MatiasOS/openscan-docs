@@ -16,6 +16,7 @@ import {
   Layers,
   Package,
 } from "lucide-react"
+import { NetworkIcon } from "@/components/network-icon"
 
 export const metadata: Metadata = {
   title: "Network Connectors",
@@ -78,31 +79,31 @@ export default function NetworkConnectorsPage() {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell>Ethereum</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Ethereum" className="h-4 w-4" />Ethereum</span></TableCell>
               <TableCell><code>1</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Optimism</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Optimism" className="h-4 w-4" />Optimism</span></TableCell>
               <TableCell><code>10</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>BNB Smart Chain</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="BNB Smart Chain" className="h-4 w-4" />BNB Smart Chain</span></TableCell>
               <TableCell><code>56</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>BNB Testnet</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="BNB Testnet" className="h-4 w-4" />BNB Testnet</span></TableCell>
               <TableCell><code>97</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Polygon</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Polygon" className="h-4 w-4" />Polygon</span></TableCell>
               <TableCell><code>137</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Base</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Base" className="h-4 w-4" />Base</span></TableCell>
               <TableCell><code>8453</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Arbitrum One</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Arbitrum One" className="h-4 w-4" />Arbitrum One</span></TableCell>
               <TableCell><code>42161</code></TableCell>
             </TableRow>
             <TableRow>
@@ -114,7 +115,7 @@ export default function NetworkConnectorsPage() {
               <TableCell><code>31337</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Sepolia Testnet</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Sepolia Testnet" className="h-4 w-4" />Sepolia Testnet</span></TableCell>
               <TableCell><code>11155111</code></TableCell>
             </TableRow>
           </TableBody>
@@ -139,19 +140,19 @@ export default function NetworkConnectorsPage() {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell>Bitcoin Mainnet</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Bitcoin Mainnet" className="h-4 w-4" />Bitcoin Mainnet</span></TableCell>
               <TableCell><code className="text-xs">bip122:000000000019d6689c085ae165831e93</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Bitcoin Testnet3</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Bitcoin Testnet3" className="h-4 w-4" />Bitcoin Testnet3</span></TableCell>
               <TableCell><code className="text-xs">bip122:000000000933ea01ad0ee984209779ba</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Bitcoin Testnet4</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Bitcoin Testnet4" className="h-4 w-4" />Bitcoin Testnet4</span></TableCell>
               <TableCell><code className="text-xs">bip122:00000000da84f2bafbbc53dee25a72ae</code></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Bitcoin Signet</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Bitcoin Signet" className="h-4 w-4" />Bitcoin Signet</span></TableCell>
               <TableCell><code className="text-xs">bip122:00000008819873e925422c1ff0f99f7c</code></TableCell>
             </TableRow>
           </TableBody>

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import {
-  FileText,
+  Database,
   GitCompare,
   Puzzle,
   Menu,
@@ -58,7 +58,7 @@ const navigation: NavSection[] = [
       { title: "Skills", href: "/skills", icon: Sparkles },
       { title: "Hardhat Plugin", href: "/hardhat-plugin", icon: Puzzle },
       { title: "Network Connectors", href: "/network-connectors", icon: Network },
-      { title: "Metadata", href: "/metadata", icon: FileText },
+      { title: "Metadata", href: "/metadata", icon: Database },
       // { title: "Tools", href: "/tools", icon: Wrench },
     ],
   },
@@ -175,7 +175,7 @@ export function DocsSidebar() {
       <div className="sticky top-0 flex h-full max-h-screen flex-col overflow-y-auto px-4 pb-8">
         <div className="flex h-14 items-center border-b border-border px-2">
           <Link href="/welcome" className="flex items-center gap-2">
-            <FileText className="h-5 w-5 text-accent" />
+            <img src="/openscan-logo.svg" alt="OpenScan" className="h-5 w-5" />
             <span className="font-semibold text-foreground tracking-tight">
               OpenScan Docs
             </span>
@@ -194,7 +194,7 @@ export function MobileNav() {
     <div className="lg:hidden">
       <div className="flex h-14 items-center justify-between border-b border-border px-4">
         <Link href="/welcome" className="flex items-center gap-2">
-          <FileText className="h-5 w-5 text-accent" />
+          <img src="/openscan-logo.svg" alt="OpenScan" className="h-5 w-5" />
           <span className="font-semibold text-foreground tracking-tight">
             OpenScan Docs
           </span>

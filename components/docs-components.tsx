@@ -67,9 +67,11 @@ export function InfoCard({ title, description, icon, className }: InfoCardProps)
         className
       )}
     >
-      {icon && <div className="mb-3 text-accent">{icon}</div>}
-      <h3 className="font-semibold text-foreground mb-1.5">{title}</h3>
-      <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+      <div className="flex items-center gap-2.5 mb-1.5">
+        {icon && <div className="shrink-0 text-accent flex items-center">{icon}</div>}
+        <h3 className="!m-0 !p-0 font-semibold text-foreground leading-tight">{title}</h3>
+      </div>
+      <p className="!m-0 text-sm leading-relaxed text-muted-foreground">{description}</p>
     </div>
   )
 }

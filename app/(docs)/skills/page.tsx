@@ -15,6 +15,7 @@ import {
   Search,
   Zap,
 } from "lucide-react"
+import { NetworkIcon } from "@/components/network-icon"
 
 export const metadata: Metadata = {
   title: "Skills — OpenScan Crypto",
@@ -294,42 +295,42 @@ crypto-cli.mjs rpc-strategy parallel              # Set global default`}</code>
             <TableRow>
               <TableCell><code>ethereum</code>, <code>eth</code>, <code>mainnet</code></TableCell>
               <TableCell>1</TableCell>
-              <TableCell>Ethereum</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Ethereum" className="h-4 w-4" />Ethereum</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>optimism</code>, <code>op</code></TableCell>
               <TableCell>10</TableCell>
-              <TableCell>Optimism</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Optimism" className="h-4 w-4" />Optimism</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>bnb</code>, <code>bsc</code></TableCell>
               <TableCell>56</TableCell>
-              <TableCell>BNB Smart Chain</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="BNB Smart Chain" className="h-4 w-4" />BNB Smart Chain</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>polygon</code>, <code>matic</code>, <code>pol</code></TableCell>
               <TableCell>137</TableCell>
-              <TableCell>Polygon</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Polygon" className="h-4 w-4" />Polygon</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>base</code></TableCell>
               <TableCell>8453</TableCell>
-              <TableCell>Base</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Base" className="h-4 w-4" />Base</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>arbitrum</code>, <code>arb</code></TableCell>
               <TableCell>42161</TableCell>
-              <TableCell>Arbitrum One</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Arbitrum One" className="h-4 w-4" />Arbitrum One</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>sepolia</code></TableCell>
               <TableCell>11155111</TableCell>
-              <TableCell>Sepolia Testnet</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Sepolia Testnet" className="h-4 w-4" />Sepolia Testnet</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell><code>bitcoin</code>, <code>btc</code></TableCell>
               <TableCell>bip122:...</TableCell>
-              <TableCell>Bitcoin Mainnet</TableCell>
+              <TableCell><span className="flex items-center gap-2"><NetworkIcon network="Bitcoin Mainnet" className="h-4 w-4" />Bitcoin Mainnet</span></TableCell>
             </TableRow>
           </TableBody>
         </Table>

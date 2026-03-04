@@ -7,11 +7,10 @@ import {
   FileCode2,
   Wallet,
   Image,
-  Bitcoin,
   Settings,
-  Network,
   ArrowRight,
 } from "lucide-react"
+import { NetworkIcon } from "@/components/network-icon"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -36,10 +35,8 @@ export default function ExplorerFunctionalitiesPage() {
       <div className="not-prose grid gap-4 sm:grid-cols-2 mb-8">
         <Link href="/explorer/super-user" className="group !no-underline hover:!no-underline">
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
-            <div className="mb-3 text-accent">
-              <Globe className="h-5 w-5" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-1.5 flex items-center gap-1.5">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <Globe className="h-5 w-5 shrink-0 text-accent" />
               Super User Mode
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
@@ -50,10 +47,8 @@ export default function ExplorerFunctionalitiesPage() {
         </Link>
         <Link href="/explorer/settings" className="group !no-underline hover:!no-underline">
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
-            <div className="mb-3 text-accent">
-              <Settings className="h-5 w-5" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-1.5 flex items-center gap-1.5">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <Settings className="h-5 w-5 shrink-0 text-accent" />
               Settings
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
@@ -94,12 +89,12 @@ export default function ExplorerFunctionalitiesPage() {
         <InfoCard
           title="EVM Chains"
           description="Ethereum, Base, Arbitrum, Optimism, BNB Chain, Polygon."
-          icon={<Network className="h-5 w-5" />}
+          icon={<NetworkIcon network="Ethereum" />}
         />
         <InfoCard
           title="Bitcoin"
           description="Bitcoin Mainnet and Testnet with full block, transaction, address, and mempool browsing."
-          icon={<Bitcoin className="h-5 w-5" />}
+          icon={<NetworkIcon network="Bitcoin" />}
         />
       </div>
 

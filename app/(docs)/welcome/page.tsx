@@ -6,7 +6,6 @@ import {
   Compass,
   Code,
   ExternalLink,
-  Globe,
   HandCoins,
   Lock,
   MessageCircle,
@@ -15,6 +14,7 @@ import {
   Unplug,
   Users,
 } from "lucide-react"
+import { NetworkIcon } from "@/components/network-icon"
 
 export const metadata: Metadata = {
   title: "Welcome to OpenScan",
@@ -41,7 +41,7 @@ export default function WelcomePage() {
       <div className="not-prose rounded-xl border border-accent/30 bg-accent/5 p-6 mb-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-1">
+            <h3 className="text-lg font-semibold text-foreground mb-1.5">
               Try the Explorer
             </h3>
             <p className="text-sm text-muted-foreground">
@@ -81,10 +81,8 @@ export default function WelcomePage() {
       <div className="not-prose grid gap-4 sm:grid-cols-3 mb-8">
         <Link href="/explorer" className="group !no-underline hover:!no-underline">
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
-            <div className="mb-3 text-accent">
-              <Compass className="h-5 w-5" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-1.5 flex items-center gap-1.5">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <Compass className="h-5 w-5 shrink-0 text-accent" />
               Use the Explorer
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
@@ -96,10 +94,8 @@ export default function WelcomePage() {
         </Link>
         <Link href="/skills" className="group !no-underline hover:!no-underline">
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
-            <div className="mb-3 text-accent">
-              <Sparkles className="h-5 w-5" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-1.5 flex items-center gap-1.5">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <Sparkles className="h-5 w-5 shrink-0 text-accent" />
               Integrate OpenScan
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
@@ -111,10 +107,8 @@ export default function WelcomePage() {
         </Link>
         <Link href="/metadata" className="group !no-underline hover:!no-underline">
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
-            <div className="mb-3 text-accent">
-              <HandCoins className="h-5 w-5" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-1.5 flex items-center gap-1.5">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <HandCoins className="h-5 w-5 shrink-0 text-accent" />
               Support OpenScan
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
@@ -164,7 +158,7 @@ export default function WelcomePage() {
         OpenScan supports a growing number of EVM and non-EVM chains.
       </p>
 
-      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
         {[
           "Ethereum",
           "Bitcoin",
@@ -178,7 +172,7 @@ export default function WelcomePage() {
             key={network}
             className="flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2.5 text-sm font-medium text-foreground"
           >
-            <Globe className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
+            <NetworkIcon network={network} className="h-3.5 w-3.5 shrink-0" />
             {network}
           </div>
         ))}
@@ -198,36 +192,36 @@ export default function WelcomePage() {
 
       <div className="not-prose grid gap-4 sm:grid-cols-3 mb-8">
         <div className="rounded-xl border border-border bg-card p-5">
-          <div className="mb-3">
+          <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
             <span className="inline-block rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
               Tier 1
             </span>
-          </div>
-          <h3 className="font-semibold text-foreground mb-1.5">Backer</h3>
+            Backer
+          </h3>
           <p className="text-sm leading-relaxed text-muted-foreground">
             Verification, formal recognition, and listing. The essential
             foundational level for tokens, networks, apps, and companies.
           </p>
         </div>
         <div className="rounded-xl border border-border bg-card p-5">
-          <div className="mb-3">
+          <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
             <span className="inline-block rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
               Tier 2
             </span>
-          </div>
-          <h3 className="font-semibold text-foreground mb-1.5">Partner</h3>
+            Partner
+          </h3>
           <p className="text-sm leading-relaxed text-muted-foreground">
             Enhanced visibility, direct technical communication, and influence on
             the project roadmap through voting power.
           </p>
         </div>
         <div className="rounded-xl border border-border bg-card p-5">
-          <div className="mb-3">
+          <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
             <span className="inline-block rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
               Tier 3
             </span>
-          </div>
-          <h3 className="font-semibold text-foreground mb-1.5">Ally</h3>
+            Ally
+          </h3>
           <p className="text-sm leading-relaxed text-muted-foreground">
             Deep commitment with the highest level of customisation, integration,
             and participation in the OpenScan DAO.

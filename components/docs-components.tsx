@@ -79,7 +79,7 @@ export function InfoCard({ title, description, icon, className }: InfoCardProps)
 interface StepProps {
   number: number
   title: string
-  description: string
+  description: React.ReactNode
   code?: string
 }
 
@@ -103,6 +103,40 @@ export function Step({ number, title, description, code }: StepProps) {
           </pre>
         )}
       </div>
+    </div>
+  )
+}
+
+interface StepSectionStep {
+  title: string
+  description: React.ReactNode
+  code?: string
+}
+
+interface StepSectionProps {
+  title: string
+  description?: React.ReactNode
+  steps: StepSectionStep[]
+}
+
+export function StepSection({ title, description, steps }: StepSectionProps) {
+  return (
+    <div className="not-prose mb-8">
+      <h2 className="text-xl font-semibold text-foreground mb-2">{title}</h2>
+      {description && (
+        <p className="text-sm leading-relaxed text-muted-foreground mb-6">
+          {description}
+        </p>
+      )}
+      {steps.map((step, idx) => (
+        <Step
+          key={idx}
+          number={idx + 1}
+          title={step.title}
+          description={step.description}
+          code={step.code}
+        />
+      ))}
     </div>
   )
 }

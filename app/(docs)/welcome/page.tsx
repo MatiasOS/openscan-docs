@@ -36,7 +36,6 @@ export default function WelcomePage() {
         OpenScan is an open-source fully independent blockchain explorer engineered to provide transparency, 
         simplicity, and true openness. A fundamental piece of public infrastructure for the crypto ecosystem.
       </p>
-      <hr />
 
       {/* 2. Highlight Banner */}
       <div className="not-prose rounded-xl border border-accent/30 bg-accent/5 p-6 mb-8">

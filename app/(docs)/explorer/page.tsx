@@ -18,7 +18,7 @@ export default function ExplorerPage() {
     <div className="prose">
       <PageHeader
         title="Explorer"
-        description="A real-time blockchain explorer built into the Acme stack. Inspect transactions, decode contract calls, and browse on-chain data across every connected network."
+        description="A open-source, trustless, and privacy-respecting blockchain explorer Inspect transactions, decode contract calls, and browse on-chain data across every connected network."
       />
 
       <h2 id="overview">Overview</h2>

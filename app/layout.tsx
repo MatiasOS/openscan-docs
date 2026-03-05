@@ -8,10 +8,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Docs — Acme',
-    template: '%s — Acme Docs',
+    default: 'Docs — OpenScan',
+    template: '%s — OpenScan Docs',
   },
-  description: 'Official documentation for Acme. Learn how it works, self-host, compare features, and understand our privacy policy.',
+  description: 'Official documentation for OpenScan. Learn how it works, self-host, compare features, and understand our privacy policy.',
 }
 
 export const viewport = {

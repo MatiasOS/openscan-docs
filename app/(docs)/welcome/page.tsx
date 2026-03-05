@@ -8,11 +8,12 @@ import {
   ExternalLink,
   HandCoins,
   Lock,
-  MessageCircle,
-  Shield,
   Sparkles,
   Unplug,
   Users,
+  Telescope,
+  SquareChevronRight,
+  ToyBrick,
 } from "lucide-react"
 import { NetworkIcon } from "@/components/network-icon"
 
@@ -83,7 +84,7 @@ export default function WelcomePage() {
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
             <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
               <Compass className="h-5 w-5 shrink-0 text-accent" />
-              Use the Explorer
+              Use
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -92,11 +93,38 @@ export default function WelcomePage() {
             </p>
           </div>
         </Link>
+        <Link href="/hardhat-plugin" className="group !no-underline hover:!no-underline">
+          <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <SquareChevronRight className="h-5 w-5 shrink-0 text-accent" />
+              Buidl
+              <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+            </h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Use the Hardhat Plugin to integrate OpenScan into your development workflow.
+            </p>
+          </div>
+        </Link>
+        <Link href="/super-user" className="group !no-underline hover:!no-underline">
+          <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
+            <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+              <Telescope className="h-5 w-5 shrink-0 text-accent" />
+              Super user
+              <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+            </h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Deep exploration and deeper insights. Learn how to leverage OpenScan's advanced features and become a power user of the ecosystem.
+            </p>
+          </div>
+        </Link>
+      </div>
+
+      <div className="not-prose grid gap-4 sm:grid-cols-2 mb-8">
         <Link href="/skills" className="group !no-underline hover:!no-underline">
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
             <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
-              <Sparkles className="h-5 w-5 shrink-0 text-accent" />
-              Integrate OpenScan
+              <ToyBrick className="h-5 w-5 shrink-0 text-accent" />
+              Integrate
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -109,7 +137,7 @@ export default function WelcomePage() {
           <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
             <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
               <HandCoins className="h-5 w-5 shrink-0 text-accent" />
-              Support OpenScan
+              Support
               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -119,7 +147,6 @@ export default function WelcomePage() {
           </div>
         </Link>
       </div>
-
       {/* 4. How It Works / Core Concepts */}
       <h2 id="how-it-works">How It Works</h2>
       <p>
@@ -131,12 +158,12 @@ export default function WelcomePage() {
 
       <div className="not-prose grid gap-4 sm:grid-cols-3 mb-8">
         <InfoCard
-          title="Trustless by Design"
+          title="Trustless"
           description="No intermediary. Queries go from your browser to your trusted RPCs."
           icon={<Unplug className="h-5 w-5" />}
         />
         <InfoCard
-          title="Open Source & Auditable"
+          title="Open Source"
           description="Codebase is publicly available and auditable. Fork it, audit it, contribute to it."
           icon={<Code className="h-5 w-5" />}
         />

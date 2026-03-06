@@ -115,7 +115,7 @@ export default function IntroductionPage() {
       <h2 id="how-it-works">How It Works</h2>
       <p>
         OpenScan is a fully client-side application. There is no required backend server.
-        everything runs in your browser, connecting directly to blockchain nodes
+        Everything runs in your browser, connecting directly to blockchain nodes
         via RPC. <br />
         No intermediaries, no centralized APIs, no compromises.
       </p>
@@ -259,11 +259,16 @@ export default function IntroductionPage() {
             Tally
           </a>
         </li>
-        <li>
-          <strong>Values</strong> —{" "}
-          <Link href="/values">Read the foundations of OpenScan</Link>
-        </li>
       </ul>
+
+      <h2 id="functionalities">Values</h2>
+      <p>
+        This project born at devConnect 2025 in Buenos Aires. Learn more about the core values and principles that guide the OpenScan project in {" "}
+        <Link href="/values" className="text-accent">
+          values
+        </Link>{" "}
+        page.
+      </p>
     </div>
   )
 }

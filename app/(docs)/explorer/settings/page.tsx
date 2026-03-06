@@ -3,17 +3,11 @@ import Link from "next/link"
 import { PageHeader, InfoCard } from "@/components/docs-components"
 import {
   Monitor,
-  Languages,
   Database,
-  Server,
-  Settings,
-  Link2,
   ShieldCheck,
   Palette,
   Key,
-  Blocks,
   TestTube,
-  Wallet,
 } from "lucide-react"
 
 export const metadata: Metadata = {

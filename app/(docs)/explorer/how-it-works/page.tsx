@@ -9,16 +9,15 @@ import {
   TableCell,
 } from "@/components/ui/table"
 import {
-  Code,
-  Eye,
-  Globe,
-  Heart,
+  BlocksIcon,
   Layers,
   Lock,
+  LockOpenIcon,
   Search,
   Shield,
   Wrench,
 } from "lucide-react"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -50,24 +49,14 @@ export default function HowItWorksPage() {
 
       <div className="not-prose grid gap-4 sm:grid-cols-2 mb-8">
         <InfoCard
-          title="User-First Mandate"
-          description="Permanently free, fully open, and completely transparent for all end-users. Success driven by technical excellence and organic adoption — no advertising."
-          icon={<Heart className="h-5 w-5" />}
-        />
-        <InfoCard
-          title="Privacy & Experience"
-          description="No invasive advertising, trackers, or hidden user-data harvesting. The explorer serves its users, not advertisers."
-          icon={<Lock className="h-5 w-5" />}
-        />
-        <InfoCard
-          title="Open Source & Auditable"
-          description="The entire codebase is publicly available, auditable, and encourages community contribution."
-          icon={<Code className="h-5 w-5" />}
+          title="No forced dependency"
+          description="No API gatekeepers, no dependency without user control."
+          icon={<LockOpenIcon className="h-5 w-5" />}
         />
         <InfoCard
           title="Infrastructure as Public Good"
           description="The decentralized ecosystem thrives only when its core infrastructure is free, accessible, and neutral."
-          icon={<Globe className="h-5 w-5" />}
+          icon={<BlocksIcon className="h-5 w-5" />}
         />
       </div>
 
@@ -97,6 +86,12 @@ export default function HowItWorksPage() {
       <ul>
         <li>
           <strong>Fully client-side</strong>. No backend server, no database, no centralized data collection. Your queries go straight to the chain.
+        </li>
+        <li>
+          <strong>Modular RPC strategy</strong>. Multiple RPC endpoints can be configured with different strategies
+        </li>
+        <li>
+          <strong>Metadata</strong>. Curated from open sources and on-chain data, but always optional and never required for core functionality.
         </li>
       </ul>
 
@@ -166,16 +161,11 @@ export default function HowItWorksPage() {
       </div>
 
       <h2 id="key-features">Key Features</h2>
-      <div className="not-prose grid gap-4 sm:grid-cols-2 mb-8">
+      <div className="not-prose grid gap-4 sm:grid-cols-3 mb-8">
         <InfoCard
           title="Block Explorer"
           description="Detailed block, transaction, and gas information with full receipt decoding and event log parsing."
           icon={<Search className="h-5 w-5" />}
-        />
-        <InfoCard
-          title="Address Lookup"
-          description="Balance, transaction history, and contract detection. ENS resolution on Ethereum mainnet."
-          icon={<Eye className="h-5 w-5" />}
         />
         <InfoCard
           title="Contract Interaction"
@@ -203,7 +193,7 @@ export default function HowItWorksPage() {
         />
       </div>
 
-      <h2 id="open-source">Open Source</h2>
+      <h2 id="open-source">Surf the blockchain</h2>
       <p>
         OpenScan is fully open source. Contribute, audit, or fork the explorer:
       </p>
@@ -217,6 +207,16 @@ export default function HowItWorksPage() {
           <a href="https://github.com/openscan-explorer/explorer">github.com/openscan-explorer/explorer</a>
         </li>
       </ul>
+
+      <h2 id="functionalities">Functionalities</h2>
+      <p>
+        For a detailed breakdown of every feature, see the{" "}
+        <Link href="/explorer/functionalities" className="text-accent">
+          Functionalities
+        </Link>{" "}
+        page.
+      </p>
+
     </div>
   )
 }

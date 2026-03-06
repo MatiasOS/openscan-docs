@@ -38,9 +38,13 @@ export default function ExplorerAlphaStatusPage() {
       <h2 id="tutorial-links">Tutorial Links</h2>
       <p>
         If you want to learn more and explore the explorer in depth or reuse our stack, start with
-        these guides
+        understanding how it works and then check out the tutorials, including the Hardhat plugin tutorial.
       </p>
 
+      <Link href="/explorer/how-it-works" className="text-accent">
+        How it Works
+      </Link>{" "}
+      — Follow a detailed non technical guide. <br />
       <Link href="/tutorials" className="text-accent">
         Tutorials
       </Link>{" "}

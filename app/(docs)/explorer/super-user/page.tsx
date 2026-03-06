@@ -2,9 +2,7 @@ import type { Metadata } from "next"
 import { PageHeader, InfoCard } from "@/components/docs-components"
 import {
   ShieldCheck,
-  Database,
   HardDrive,
-  Trash2,
   Eye,
   Gauge,
   Braces,
@@ -12,9 +10,9 @@ import {
   Layers,
   Cable,
   FlaskConical,
-  Workflow,
   Wrench,
 } from "lucide-react"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Super User Functionalities",
@@ -215,6 +213,10 @@ export default function SuperUserFunctionalitiesPage() {
         Hardhat Ignition artifact ZIP upload and parsing, plus local artifact
         flow for development-time contract verification.
       </p>
+      <Link href="/hardhat-plugin" className="text-accent">
+        Hardhat 3 Ignition Integration
+      </Link>{" "}
+      — Learn How to simplify your development time.
     </div>
   )
 }

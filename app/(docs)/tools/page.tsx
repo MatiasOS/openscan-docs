@@ -2,11 +2,9 @@ import type { Metadata } from "next"
 import { PageHeader, InfoCard } from "@/components/docs-components"
 import {
   Code2,
-  FileJson,
   Hammer,
   KeyRound,
   ScrollText,
-  ShieldCheck,
   Terminal,
   TestTube,
 } from "lucide-react"

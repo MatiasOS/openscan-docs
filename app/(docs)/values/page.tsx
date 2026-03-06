@@ -6,13 +6,14 @@ import {
   Heart,
   Lock,
   Code,
-  Shield,
   Scale,
   Users,
   Sprout,
   HandCoins,
   Blocks,
   Unplug,
+  ShieldCheck,
+  Sailboat,
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -105,22 +106,25 @@ export default function ValuesPage() {
         belongs to everyone.
       </p>
 
-      <div className="not-prose grid gap-4 sm:grid-cols-1 lg:grid-cols-3 mb-8">
+      <div className="not-prose grid gap-4 sm:grid-cols-1 lg:grid-cols-2 mb-4">
         <InfoCard
           title="No Critical Secrets"
           description="No step of a protocol should depend on private information held by a single actor — except the user themselves."
           icon={<Eye className="h-5 w-5" />}
         />
         <InfoCard
+          title="No Unverifiable Outcomes"
+          description="Every effect on state must be reproducible and checkable from public data. A system that fails must fail publicly, transparently, and recoverably."
+          icon={<ShieldCheck className="h-5 w-5" />}
+        />
+      </div>
+      <div className="not-prose grid gap-4 sm:grid-cols-1 lg:grid-cols-1 mb-8">
+        <InfoCard
           title="No Indispensable Intermediaries"
           description="Anyone who forwards, executes, or attests must be replaceable by any other participant following the same rules. Participation must be practically open, not reserved for those with servers, funding, and DevOps skills."
           icon={<Users className="h-5 w-5" />}
         />
-        <InfoCard
-          title="No Unverifiable Outcomes"
-          description="Every effect on state must be reproducible and checkable from public data. A system that fails must fail publicly, transparently, and recoverably."
-          icon={<Shield className="h-5 w-5" />}
-        />
+
       </div>
 
       <h2 id="sustainability">Sustainability Over Extraction</h2>
@@ -145,7 +149,7 @@ export default function ValuesPage() {
         <InfoCard
           title="Lean Structure"
           description="A compact, high-performance team capped at 8 full-time individuals — maximizing efficiency and minimizing overhead."
-          icon={<Users className="h-5 w-5" />}
+          icon={<Sailboat className="h-5 w-5" />}
         />
         <InfoCard
           title="Open Development"

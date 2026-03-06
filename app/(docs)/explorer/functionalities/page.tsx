@@ -10,6 +10,7 @@ import {
   Settings,
 } from "lucide-react"
 import { NetworkIcon } from "@/components/network-icon"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Explorer Functionalities",
@@ -222,6 +223,19 @@ export default function ExplorerFunctionalitiesPage() {
           individual mempool transactions.
         </li>
       </ul>
+
+      <h2 id="tutorial-links">Tutorial Links</h2>
+      <p>
+        If you want to learn How to configure? or do super user stuff, start with <br />
+      </p>
+      <Link href="/explorer/settings" className="text-accent">
+        Settings
+      </Link>{" "}
+      — Learn what can be configured and how. <br />
+      <Link href="/explorer/super-user" className="text-accent">
+        Super-User Mode
+      </Link>{" "}
+      — DevTools and advanced technical analysis capabilities.
     </div>
   )
 }

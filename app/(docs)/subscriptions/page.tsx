@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react"
 import { InfoCard, PageHeader, StepSection } from "@/components/docs-components"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -212,23 +211,6 @@ export default function SubscriptionsPage() {
         title="Support OpenScan"
         description="Sustainable, ethical funding for open-source blockchain infrastructure."
       />
-
-      <div className="not-prose mb-8">
-        <Alert className="border-accent/30 bg-accent/5">
-          <AlertTitle className="text-foreground">
-            Open and free for end-users
-          </AlertTitle>
-          <AlertDescription>
-            OpenScan remains{" "}
-            <strong className="font-semibold text-accent">
-              entirely free for all end-users
-            </strong>
-            . Revenue is sourced from projects, applications, tokens, and
-            networks that recognize the value of the platform and want to appear
-            as verified supporters of the open ecosystem.
-          </AlertDescription>
-        </Alert>
-      </div>
 
       <h2 id="plans">Subscription Plans</h2>
 

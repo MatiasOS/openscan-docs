@@ -88,12 +88,11 @@ export default function ExplorerPage() {
         />
       </div>
 
-      <h2 id="functionalities">Functionalities</h2>
+      <h2 id="functionalities">Status</h2>
       <p>
-        The Explorer ships with a rich set of built-in functionalities. For a
-        detailed breakdown of every feature, see the{" "}
-        <Link href="/explorer/functionalities" className="text-accent">
-          Functionalities
+        The Explorer is currently in Alpha Status. Learn more about in {" "}
+        <Link href="/explorer/alpha-status" className="text-accent">
+          Current Status
         </Link>{" "}
         page.
       </p>

@@ -15,6 +15,7 @@ import {
   HelpCircle,
   BookOpen,
   Heart,
+  Shield,
 } from "lucide-react"
 import { useState } from "react"
 
@@ -36,6 +37,7 @@ const navigation: NavSection[] = [
     items: [
       { title: "Introduction", href: "/introduction", icon: BookOpen },
       { title: "Values", href: "/values", icon: Heart },
+      { title: "Alignment", href: "/alignment", icon: Shield },
     ],
   },
   {
@@ -64,11 +66,8 @@ const navigation: NavSection[] = [
     title: "More",
     items: [
       { title: "Tutorials", href: "/tutorials", icon: HelpCircle },
-      // { title: "Comparison", href: "/comparison", icon: GitCompare },
       { title: "Subscriptions", href: "/subscriptions", icon: Heart },
       { title: "Contact", href: "/contact", icon: HelpCircle },
-      // { title: "Supporters", href: "/supporters", icon: HelpCircle },
-      // { title: "FAQs", href: "/faqs", icon: HelpCircle },
     ],
   },
 ]

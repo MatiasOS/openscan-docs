@@ -117,7 +117,8 @@ export default function IntroductionPage() {
         OpenScan is a fully client-side application. There is no required backend server.
         Everything runs in your browser, connecting directly to blockchain nodes
         via RPC. <br />
-        No intermediaries, no centralized APIs, no compromises.
+
+        No intermediaries, no centralized APIs, no compromises — and no one who can stop you from using it.
       </p>
 
       <div className="not-prose grid gap-4 sm:grid-cols-3 mb-8">

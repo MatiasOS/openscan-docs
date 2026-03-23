@@ -16,6 +16,9 @@ import {
   Search,
   Shield,
   Wrench,
+  Minimize2,
+  Package,
+  CheckCircle,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -190,6 +193,31 @@ export default function HowItWorksPage() {
           title="Custom RPCs"
           description="Configure your own RPC endpoints. Use privacy-focused providers or connect to your own node for full sovereignty."
           icon={<Lock className="h-5 w-5" />}
+        />
+      </div>
+
+      <h2 id="security-design">Security Design</h2>
+      <p>
+        Security is not a feature — it is a property of the architecture.
+        OpenScan follows these design principles to minimize attack surface and
+        maximize verifiability.
+      </p>
+
+      <div className="not-prose grid gap-4 sm:grid-cols-3 mb-8">
+        <InfoCard
+          title="Simplicity of Architecture"
+          description="A fully client-side application with no backend reduces the attack surface to the browser itself. Fewer moving parts means fewer things that can fail or be exploited."
+          icon={<Minimize2 className="h-5 w-5" />}
+        />
+        <InfoCard
+          title="Minimal Dependencies"
+          description="The Network Connectors library uses pure Node.js with zero external dependencies. Every dependency is a trust assumption — we minimize them deliberately."
+          icon={<Package className="h-5 w-5" />}
+        />
+        <InfoCard
+          title="Verifiable Behavior"
+          description="Parallel RPC strategies can detect provider divergence. Every query result is reproducible from public data. Systems must do what they claim — no more, no less."
+          icon={<CheckCircle className="h-5 w-5" />}
         />
       </div>
 

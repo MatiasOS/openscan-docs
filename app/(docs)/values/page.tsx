@@ -14,6 +14,8 @@ import {
   Unplug,
   ShieldCheck,
   Sailboat,
+  Shield,
+  Footprints,
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -49,7 +51,7 @@ export default function ValuesPage() {
         />
         <InfoCard
           title="Privacy & Experience"
-          description="No invasive advertising, trackers, or hidden user-data harvesting. We serve users, not advertisers."
+          description="Your exploration activity stays on your device. No invasive advertising, trackers, or hidden user-data harvesting — privacy by architecture, not by policy."
           icon={<Lock className="h-5 w-5" />}
         />
         <InfoCard
@@ -71,6 +73,11 @@ export default function ValuesPage() {
           title="Connection, Not Custody"
           description="OpenScan will not function as an intermediary that holds or stores information. We only deploy features that are publicly accessible."
           icon={<Unplug className="h-5 w-5" />}
+        />
+        <InfoCard
+          title="Censorship Resistance"
+          description="No server to block, no API keys to revoke, no intermediary to pressure. The client-side architecture ensures no actor can selectively exclude valid use."
+          icon={<Shield className="h-5 w-5" />}
         />
       </div>
 
@@ -127,6 +134,19 @@ export default function ValuesPage() {
 
       </div>
 
+      <p>
+        These laws operationalize what the Ethereum Foundation&apos;s{" "}
+        <a href="https://openscan.eth.link/#/1/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855" target="_blank" rel="noopener noreferrer">
+          Mandate
+        </a>{" "}
+        calls <strong>CROPS</strong> — Censorship Resistance, Open Source, Privacy, Security — for
+        the specific domain of blockchain data access. They are rooted in the principles
+        articulated in the{" "}
+        <a href="https://trustlessness.eth.limo/general/2025/11/11/the-trustless-manifesto.html" target="_blank" rel="noopener noreferrer">
+          Trustless Manifesto
+        </a>.
+      </p>
+
       <h2 id="sustainability">Sustainability Over Extraction</h2>
       <p>
         OpenScan&apos;s business model is designed to be ethical, non-extractive,
@@ -155,6 +175,11 @@ export default function ValuesPage() {
           title="Open Development"
           description="All development takes place in public, auditable repositories. We use open-source tools wherever possible to maintain independence."
           icon={<Blocks className="h-5 w-5" />}
+        />
+        <InfoCard
+          title="Walkaway Test"
+          description="If the team vanished tomorrow, the client-side explorer would continue to work with any RPC endpoint. No single entity is required for OpenScan to function."
+          icon={<Footprints className="h-5 w-5" />}
         />
       </div>
 

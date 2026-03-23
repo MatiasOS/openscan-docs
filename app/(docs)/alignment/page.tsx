@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { PageHeader, InfoCard } from "@/components/docs-components"
+import { PageHeader, InfoCard, LinkCard } from "@/components/docs-components"
 import {
   Shield,
   Code,
@@ -135,30 +135,20 @@ export default function AlignmentPage() {
       </p>
 
       <div className="not-prose grid gap-4 sm:grid-cols-1 lg:grid-cols-2 mb-8">
-        <a
+        <LinkCard
           href="https://openscan.eth.link/#/1/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <InfoCard
-            title="Ethereum Foundation Mandate"
-            description="The EF's 1000-year charter for Ethereum — centered on CROPS, self-sovereignty, and the walkaway test. Stored on-chain and viewable via OpenScan."
-            icon={<ExternalLink className="h-5 w-5" />}
-          />
-        </a>
-        <a
+          title="Ethereum Foundation Mandate"
+          description="The EF's 1000-year charter for Ethereum — centered on CROPS, self-sovereignty, and the walkaway test. Stored on-chain and viewable via OpenScan."
+          icon={<ExternalLink className="h-5 w-5 shrink-0 text-accent" />}
+          external
+        />
+        <LinkCard
           href="https://trustlessness.eth.limo/general/2025/11/11/the-trustless-manifesto.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <InfoCard
-            title="The Trustless Manifesto"
-            description="The philosophical foundation for OpenScan's Three Laws of Trustless Design — why trustlessness matters, what it demands, and the pledge we build by."
-            icon={<ExternalLink className="h-5 w-5" />}
-          />
-        </a>
+          title="The Trustless Manifesto"
+          description="The philosophical foundation for OpenScan's Three Laws of Trustless Design — why trustlessness matters, what it demands, and the pledge we build by."
+          icon={<ExternalLink className="h-5 w-5 shrink-0 text-accent" />}
+          external
+        />
       </div>
     </div>
   )

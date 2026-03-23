@@ -55,19 +55,34 @@ interface LinkCardProps {
   title: string
   description: string
   icon: React.ReactNode
+  external?: boolean
 }
 
-export function LinkCard({ href, title, description, icon }: LinkCardProps) {
+export function LinkCard({ href, title, description, icon, external }: LinkCardProps) {
+  const content = (
+    <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
+      <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
+        {icon}
+        {title}
+        {!external && (
+          <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+        )}
+      </h3>
+      <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+    </div>
+  )
+
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className="group !no-underline hover:!no-underline">
+        {content}
+      </a>
+    )
+  }
+
   return (
     <Link href={href} className="group !no-underline hover:!no-underline">
-      <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/40 h-full">
-        <h3 className="!mt-0 font-semibold text-foreground mb-1.5 flex items-center gap-2">
-          {icon}
-          {title}
-          <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-        </h3>
-        <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
-      </div>
+      {content}
     </Link>
   )
 }
